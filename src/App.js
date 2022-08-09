@@ -38,13 +38,13 @@ const activeMenu = true
               </div>
               <div>
                 <Routes>
-                  {/* Dasboard */}
+                  {/* Dashboard */}
                   <Route path="/" element="ECommerce" />
                   <Route path="/ecommerce" element="ECommerce" />
 
                   {/* Pages */}
                   <Route path="/orders" element="Orders" />
-                  <Route path="/employess" element="Employees" />
+                  <Route path="/employees" element="Employees" />
                   <Route path="/customers" element="Customers" />
 
                   {/* Apps */}
@@ -53,7 +53,7 @@ const activeMenu = true
                   <Route path="/calendar" element="Calendar" />
                   <Route path="/color-picker" element="Color Picker" />
 
-                  {/* Charsts */}
+                  {/* Charts */}
                   
                   <Route path="/line" element="Line" />
                   <Route path="/area" element="Area" />
