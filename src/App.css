@@ -8,7 +8,10 @@
 .navbar {
   z-index: 10000;
 }
-
+.e-schedule {
+  background-color: lightgrey;
+  border: 1px solid slategray;
+}
 @media  screen and (max-width:800px) {
   .sidebar{
     z-index: 10000000;

@@ -1,6 +1,8 @@
 import React from 'react';
 import { SparklineComponent, Inject, SparklineTooltip } from '@syncfusion/ej2-react-charts';
 
+// Created as class based component due to documented issues on Syncfusion
+
 class SparkLine extends React.PureComponent {
   render() {
     const { id, height, width, color, data, type, currentColor } = this.props;

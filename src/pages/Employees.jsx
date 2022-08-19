@@ -9,7 +9,7 @@ const Employees = () => {
   const editing = { allowDeleting: true, allowEditing: true };
 
   return (
-    <div className="rounded-3xl bg-white m-2 p-2 mt-24 md:m-10 md:p-10">
+    <div className="rounded-3xl bg-white m-2 p-2 mt-24 md:m-10 md:p-10 dark:bg-gray-300">
       <Header
         category="Page"
         title="Employees"

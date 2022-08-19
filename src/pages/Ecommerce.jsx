@@ -16,7 +16,7 @@ const DropDown = ({ currentMode }) => (
       fields={{ text: 'Time', value: 'Id' }}
       style={{ border: 'none', color: (currentMode === 'Dark') && 'white' }}
       value="1"
-      dataSource={dropdownData}
+      dataSource={ dropdownData }
       popupHeight="220px"
       popupWidth="120px"
     />
@@ -24,8 +24,7 @@ const DropDown = ({ currentMode }) => (
 );
 
 const Ecommerce = () => {
-  const { currentMode } = useStateContext();
-  const currentColor = 'blue';
+  const { currentColor, currentMode } = useStateContext();
 
   return (
     <div className="mt-24">
@@ -54,7 +53,7 @@ const Ecommerce = () => {
           </div>
         </div>
         <div className="flex m-3 flex-wrap justify-center gap-1 items-center">
-          {earningData.map((item) => (
+          { earningData.map((item) => (
             <div key={item.title} className="bg-white h-44 dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56  p-4 pt-9 rounded-2xl ">
               <button
                 type="button"
@@ -71,7 +70,7 @@ const Ecommerce = () => {
               </p>
               <p className="text-sm text-gray-400 mt-1">{item.title}</p>
             </div>
-          ))}
+          )) }
         </div>
       </div>
 
@@ -227,7 +226,7 @@ const Ecommerce = () => {
         </div>
         <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-6 rounded-2xl w-96 md:w-760">
           <div className="flex justify-between items-center gap-2 mb-10">
-            <p className="text-xl font-semibold">Sales Overview</p>
+            <p className="text-xl font-semibold">Monthly Rainfall</p>
             <DropDown currentMode={ currentMode } />
           </div>
           <div className="md:w-full overflow-auto">
@@ -287,7 +286,7 @@ const Ecommerce = () => {
             </button>
           </div>
           <p className="text-xs cursor-pointer hover:drop-shadow-xl font-semibold rounded-lg w-24 bg-orange-400 py-0.5 px-2 text-gray-200 mt-10">
-            16 APR, 2021
+            16 Jun, 2021
           </p>
 
           <div className="flex gap-4 border-b-1 border-color mt-6">
@@ -348,11 +347,10 @@ const Ecommerce = () => {
               alt=""
             />
             <div className="mt-8">
-              <p className="font-semibold text-lg">React 18 coming soon!</p>
-              <p className="text-gray-400 ">By Johnathan Doe</p>
+              <p className="font-semibold text-lg">About Me</p>
+              <p className="text-gray-400 ">By Damon Hill</p>
               <p className="mt-8 text-sm text-gray-400">
-                This will be the small description for the news you have shown
-                here. There could be some great info.
+                I am an aspiring full stack developer with experience using HTML/CSS/JS, Python/Django, php, and upskilling in React, REST, SQL while searching for a position where I can grow and build a career.
               </p>
               <div className="mt-3">
                 <Button

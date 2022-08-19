@@ -14,7 +14,7 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
   <TooltipComponent content={ title } position="BottomCenter">
     <button
       type="button" 
-      onClick={ customFunc }
+      onClick={() => customFunc() }
       style={{ color }}
       className="relative text-xl rounded-full p-3 hover:bg-light-gray"
     >
@@ -80,18 +80,20 @@ const Navbar = () => {
           color={ currentColor }
           icon={ <RiNotification3Line /> }
         />
-        <TooltipComponent 
+        <TooltipComponent
           content="Profile"
           position="BottomCenter"
         >
-          <div className="flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg"
-            onClick={ () => handleClick('userProfile') }>
-              <img src={avatar} className="rounded-full w-8 h-8" alt="User profile" />
-              <p>
-                <span className="text-gray-400 text-14">Hi, </span> {' '}
-                <span className="text-gray-400 font-bold ml-1 text-14">Damon</span>
-              </p>
-              <MdKeyboardArrowDown className="text-gray-400 text-14" />
+          <div
+            className="flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg"
+            onClick={ () => handleClick('userProfile') }
+          >
+            <img src={avatar} className="rounded-full w-8 h-8" alt="User profile" />
+            <p>
+              <span className="text-gray-400 text-14">Hi, </span> {' '}
+              <span className="text-gray-400 font-bold ml-1 text-14">Damon</span>
+            </p>
+            <MdKeyboardArrowDown className="text-gray-400 text-14" />
           </div>
         </TooltipComponent>
         { isClicked.cart && <Cart /> }

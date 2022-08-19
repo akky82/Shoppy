@@ -140,6 +140,7 @@ const customerGridStatus = (props) => (
     <p>{props.Status}</p>
   </div>
 );
+
 export const areaPrimaryXAxis = {
   valueType: 'DateTime',
   labelFormat: 'y',
@@ -152,60 +153,63 @@ export const areaPrimaryXAxis = {
 export const areaPrimaryYAxis = {
   labelFormat: '{value}%',
   lineStyle: { width: 0 },
-  maximum: 4,
-  interval: 1,
+  maximum: 5,
+  minimum: 0,
+  interval: 0.5,
   majorTickLines: { width: 0 },
   minorTickLines: { width: 0 },
   labelStyle: { color: 'gray' },
-
 };
+
 export const barPrimaryXAxis = {
   valueType: 'Category',
   interval: 1,
   majorGridLines: { width: 0 },
 };
+
 export const barPrimaryYAxis = {
   majorGridLines: { width: 0 },
   majorTickLines: { width: 0 },
   lineStyle: { width: 0 },
   labelStyle: { color: 'transparent' },
 };
+
 const areaChartData = [
   [
-    { x: new Date(2002, 0, 1), y: 2.2 },
-    { x: new Date(2003, 0, 1), y: 3.4 },
-    { x: new Date(2004, 0, 1), y: 2.8 },
-    { x: new Date(2005, 0, 1), y: 1.6 },
-    { x: new Date(2006, 0, 1), y: 2.3 },
-    { x: new Date(2007, 0, 1), y: 2.5 },
-    { x: new Date(2008, 0, 1), y: 2.9 },
-    { x: new Date(2009, 0, 1), y: 3.8 },
-    { x: new Date(2010, 0, 1), y: 1.4 },
-    { x: new Date(2011, 0, 1), y: 3.1 },
+    { x: new Date(2012, 0, 1), y: 1.76 },
+    { x: new Date(2013, 0, 1), y: 2.45 },
+    { x: new Date(2014, 0, 1), y: 2.49 },
+    { x: new Date(2015, 0, 1), y: 1.51 },
+    { x: new Date(2016, 0, 1), y: 1.28 },
+    { x: new Date(2017, 0, 1), y: 1.95 },
+    { x: new Date(2018, 0, 1), y: 1.91 },
+    { x: new Date(2019, 0, 1), y: 1.61 },
+    { x: new Date(2020, 0, 1), y: 0.85 },
+    { x: new Date(2021, 0, 1), y: 2.86 },
   ],
   [
-    { x: new Date(2002, 0, 1), y: 2 },
-    { x: new Date(2003, 0, 1), y: 1.7 },
-    { x: new Date(2004, 0, 1), y: 1.8 },
-    { x: new Date(2005, 0, 1), y: 2.1 },
-    { x: new Date(2006, 0, 1), y: 2.3 },
-    { x: new Date(2007, 0, 1), y: 1.7 },
-    { x: new Date(2008, 0, 1), y: 1.5 },
-    { x: new Date(2009, 0, 1), y: 2.8 },
-    { x: new Date(2010, 0, 1), y: 1.5 },
-    { x: new Date(2011, 0, 1), y: 2.3 },
+    { x: new Date(2012, 0, 1), y: 2.07 },
+    { x: new Date(2013, 0, 1), y: 1.46 },
+    { x: new Date(2014, 0, 1), y: 1.62 },
+    { x: new Date(2015, 0, 1), y: 0.12 },
+    { x: new Date(2016, 0, 1), y: 1.26 },
+    { x: new Date(2017, 0, 1), y: 2.13 },
+    { x: new Date(2018, 0, 1), y: 2.44 },
+    { x: new Date(2019, 0, 1), y: 1.81 },
+    { x: new Date(2020, 0, 1), y: 1.23 },
+    { x: new Date(2021, 0, 1), y: 4.70 },
   ],
   [
-    { x: new Date(2002, 0, 1), y: 0.8 },
-    { x: new Date(2003, 0, 1), y: 1.3 },
-    { x: new Date(2004, 0, 1), y: 1.1 },
-    { x: new Date(2005, 0, 1), y: 1.6 },
-    { x: new Date(2006, 0, 1), y: 2 },
-    { x: new Date(2007, 0, 1), y: 1.7 },
-    { x: new Date(2008, 0, 1), y: 2.3 },
-    { x: new Date(2009, 0, 1), y: 2.7 },
-    { x: new Date(2010, 0, 1), y: 1.1 },
-    { x: new Date(2011, 0, 1), y: 2.3 },
+    { x: new Date(2012, 0, 1), y: 2.57 },
+    { x: new Date(2013, 0, 1), y: 2.29 },
+    { x: new Date(2014, 0, 1), y: 1.45 },
+    { x: new Date(2015, 0, 1), y: 0.37 },
+    { x: new Date(2016, 0, 1), y: 1.01 },
+    { x: new Date(2017, 0, 1), y: 2.56 },
+    { x: new Date(2018, 0, 1), y: 2.29 },
+    { x: new Date(2019, 0, 1), y: 1.74 },
+    { x: new Date(2020, 0, 1), y: 0.99 },
+    { x: new Date(2021, 0, 1), y: 2.52 },
   ],
 ];
 
@@ -214,7 +218,7 @@ export const areaCustomSeries = [
     dataSource: areaChartData[0],
     xName: 'x',
     yName: 'y',
-    name: 'USA',
+    name: 'AUS',
     opacity: '0.8',
     type: 'SplineArea',
     width: '2',
@@ -224,7 +228,7 @@ export const areaCustomSeries = [
     dataSource: areaChartData[1],
     xName: 'x',
     yName: 'y',
-    name: 'France',
+    name: 'USA',
     opacity: '0.8',
     type: 'SplineArea',
     width: '2',
@@ -233,7 +237,7 @@ export const areaCustomSeries = [
     dataSource: areaChartData[2],
     xName: 'x',
     yName: 'y',
-    name: 'Germany',
+    name: 'UK',
     opacity: '0.8',
     type: 'SplineArea',
     width: '2',
@@ -242,19 +246,19 @@ export const areaCustomSeries = [
 
 export const barChartData = [
   [
-    { x: 'USA', y: 46 },
-    { x: 'GBR', y: 27 },
-    { x: 'CHN', y: 26 },
+    { x: 'USA', y: 39 },
+    { x: 'CHN', y: 38 },
+    { x: 'GBR', y: 22 },
   ],
   [
-    { x: 'USA', y: 37 },
-    { x: 'GBR', y: 23 },
+    { x: 'USA', y: 41 },
+    { x: 'CHN', y: 32 },
+    { x: 'GBR', y: 21 },
+  ],
+  [
+    { x: 'USA', y: 33 },
     { x: 'CHN', y: 18 },
-  ],
-  [
-    { x: 'USA', y: 38 },
-    { x: 'GBR', y: 17 },
-    { x: 'CHN', y: 26 },
+    { x: 'GBR', y: 22 },
   ],
 ];
 
@@ -304,22 +308,23 @@ export const barCustomSeries = [
 ];
 export const colorMappingData = [
   [
-    { x: 'Jan', y: 6.96 },
-    { x: 'Feb', y: 8.9 },
-    { x: 'Mar', y: 12 },
-    { x: 'Apr', y: 17.5 },
-    { x: 'May', y: 22.1 },
-    { x: 'June', y: 25 },
-    { x: 'July', y: 29.4 },
-    { x: 'Aug', y: 29.6 },
-    { x: 'Sep', y: 25.8 },
-    { x: 'Oct', y: 21.1 },
-    { x: 'Nov', y: 15.5 },
-    { x: 'Dec', y: 9.9 },
+    { x: 'Jan', y: 33 },
+    { x: 'Feb', y: 32 },
+    { x: 'Mar', y: 28 },
+    { x: 'Apr', y: 23 },
+    { x: 'May', y: 19 },
+    { x: 'June', y: 15 },
+    { x: 'July', y: 14 },
+    { x: 'Aug', y: 16 },
+    { x: 'Sep', y: 19 },
+    { x: 'Oct', y: 23 },
+    { x: 'Nov', y: 27 },
+    { x: 'Dec', y: 30 },
   ],
   ['#FFFF99'],
   ['#FFA500'],
   ['#FF4040'],
+  ['#FF0B0B']
 ];
 
 export const rangeColorMapping = [
@@ -337,7 +342,10 @@ export const rangeColorMapping = [
     start: '21',
     end: '30',
     colors: colorMappingData[3] },
-
+  { label: '31°C to 40°C',
+    start: '31',
+    end: '40',
+    colors: colorMappingData[4] },
 ];
 
 export const ColorMappingPrimaryXAxis = {
@@ -373,19 +381,19 @@ export const FinancialPrimaryYAxis = {
 
 export const LinePrimaryXAxis = {
   valueType: 'DateTime',
-  labelFormat: 'y',
-  intervalType: 'Years',
+  labelFormat: 'MMM',
+  intervalType: 'Months',
   edgeLabelPlacement: 'Shift',
   majorGridLines: { width: 0 },
   background: 'white',
 };
 
 export const LinePrimaryYAxis = {
-  labelFormat: '{value}%',
+  labelFormat: '{value}mm',
   rangePadding: 'None',
   minimum: 0,
-  maximum: 100,
-  interval: 20,
+  maximum: 850,
+  interval: 100,
   lineStyle: { width: 0 },
   majorTickLines: { width: 0 },
   minorTickLines: { width: 0 },
@@ -514,6 +522,10 @@ export const links = [
       },
       {
         name: 'color-picker',
+        icon: <BiColorFill />,
+      },
+      {
+        name: 'weather',
         icon: <BiColorFill />,
       },
     ],
@@ -774,7 +786,7 @@ export const medicalproBranding = {
   data: [
     {
       title: 'Due Date',
-      desc: 'Oct 23, 2021',
+      desc: 'Oct 23, 2022',
     },
     {
       title: 'Budget',
@@ -787,11 +799,11 @@ export const medicalproBranding = {
   ],
   teams: [
     {
-      name: 'Bootstrap',
+      name: 'Django ',
       color: 'orange',
     },
     {
-      name: 'Angular',
+      name: 'React',
       color: '#FB9678',
     },
   ],
@@ -841,8 +853,8 @@ export const themeColors = [
     color: '#1E4DB7',
   },
   {
-    color: '#FB9678',
     name: 'orange-theme',
+    color: '#FB9678',
   },
 ];
 
@@ -1487,7 +1499,7 @@ export const employeesData = [
     Name: 'Nancy Davolio',
     Title: 'Sales Representative',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
     avatar3,
@@ -1497,7 +1509,7 @@ export const employeesData = [
     Name: 'Nasimiyu Danai',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar3,
@@ -1507,7 +1519,7 @@ export const employeesData = [
     Name: 'Iulia Albu',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar4,
@@ -1517,7 +1529,7 @@ export const employeesData = [
     Name: 'Siegbert Gottfried',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar2,
@@ -1527,7 +1539,7 @@ export const employeesData = [
     Name: 'Omar Darobe',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar,
@@ -1537,7 +1549,7 @@ export const employeesData = [
     Name: 'Penjani Inyene',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar,
@@ -1547,7 +1559,7 @@ export const employeesData = [
     Name: 'Miron Vitold',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar2,
@@ -1557,7 +1569,7 @@ export const employeesData = [
     Name: 'Nancy Davolio',
     Title: 'Sales Representative',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
     avatar2,
@@ -1568,7 +1580,7 @@ export const employeesData = [
     Name: 'Nasimiyu Danai',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar3,
@@ -1578,7 +1590,7 @@ export const employeesData = [
     Name: 'Iulia Albu',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar4,
@@ -1588,7 +1600,7 @@ export const employeesData = [
     Name: 'Siegbert Gottfried',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar2,
@@ -1598,7 +1610,7 @@ export const employeesData = [
     Name: 'Omar Darobe',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar,
@@ -1608,7 +1620,7 @@ export const employeesData = [
     Name: 'Penjani Inyene',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar,
@@ -1618,7 +1630,7 @@ export const employeesData = [
     Name: 'Miron Vitold',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar2,
@@ -1628,7 +1640,7 @@ export const employeesData = [
     Name: 'Nancy Davolio',
     Title: 'Sales Representative',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
     avatar,
@@ -1638,7 +1650,7 @@ export const employeesData = [
     Name: 'Nasimiyu Danai',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar3,
@@ -1648,7 +1660,7 @@ export const employeesData = [
     Name: 'Iulia Albu',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar4,
@@ -1658,7 +1670,7 @@ export const employeesData = [
     Name: 'Siegbert Gottfried',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar2,
@@ -1668,7 +1680,7 @@ export const employeesData = [
     Name: 'Omar Darobe',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar,
@@ -1678,7 +1690,7 @@ export const employeesData = [
     Name: 'Penjani Inyene',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar,
@@ -1688,7 +1700,7 @@ export const employeesData = [
     Name: 'Miron Vitold',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar2,
@@ -1698,7 +1710,7 @@ export const employeesData = [
     Name: 'Nancy Davolio',
     Title: 'Sales Representative',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
     avatar2,
@@ -1709,7 +1721,7 @@ export const employeesData = [
     Name: 'Nasimiyu Danai',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar3,
@@ -1719,7 +1731,7 @@ export const employeesData = [
     Name: 'Iulia Albu',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar4,
@@ -1729,7 +1741,7 @@ export const employeesData = [
     Name: 'Siegbert Gottfried',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar2,
@@ -1739,7 +1751,7 @@ export const employeesData = [
     Name: 'Omar Darobe',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar,
@@ -1749,7 +1761,7 @@ export const employeesData = [
     Name: 'Penjani Inyene',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar,
@@ -1759,7 +1771,7 @@ export const employeesData = [
     Name: 'Miron Vitold',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar2,
@@ -1769,7 +1781,7 @@ export const employeesData = [
     Name: 'Nancy Davolio',
     Title: 'Sales Representative',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
     avatar2,
@@ -1780,7 +1792,7 @@ export const employeesData = [
     Name: 'Nasimiyu Danai',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar3,
@@ -1790,7 +1802,7 @@ export const employeesData = [
     Name: 'Iulia Albu',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar4,
@@ -1800,7 +1812,7 @@ export const employeesData = [
     Name: 'Siegbert Gottfried',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar2,
@@ -1810,7 +1822,7 @@ export const employeesData = [
     Name: 'Omar Darobe',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar,
@@ -1820,7 +1832,7 @@ export const employeesData = [
     Name: 'Penjani Inyene',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar,
@@ -1830,7 +1842,7 @@ export const employeesData = [
     Name: 'Miron Vitold',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar2,
@@ -1840,7 +1852,7 @@ export const employeesData = [
     Name: 'Nancy Davolio',
     Title: 'Sales Representative',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
     avatar2,
@@ -1851,7 +1863,7 @@ export const employeesData = [
     Name: 'Nasimiyu Danai',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar3,
@@ -1861,7 +1873,7 @@ export const employeesData = [
     Name: 'Iulia Albu',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar4,
@@ -1871,7 +1883,7 @@ export const employeesData = [
     Name: 'Siegbert Gottfried',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar2,
@@ -1881,7 +1893,7 @@ export const employeesData = [
     Name: 'Omar Darobe',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar,
@@ -1891,7 +1903,7 @@ export const employeesData = [
     Name: 'Penjani Inyene',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar,
@@ -1901,7 +1913,7 @@ export const employeesData = [
     Name: 'Miron Vitold',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar2,
@@ -1911,7 +1923,7 @@ export const employeesData = [
     Name: 'Nancy Davolio',
     Title: 'Sales Representative',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
     avatar2,
@@ -1922,7 +1934,7 @@ export const employeesData = [
     Name: 'Nasimiyu Danai',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar3,
@@ -1932,7 +1944,7 @@ export const employeesData = [
     Name: 'Iulia Albu',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar4,
@@ -1942,7 +1954,7 @@ export const employeesData = [
     Name: 'Siegbert Gottfried',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar2,
@@ -1952,7 +1964,7 @@ export const employeesData = [
     Name: 'Omar Darobe',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar,
@@ -1962,7 +1974,7 @@ export const employeesData = [
     Name: 'Penjani Inyene',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar,
@@ -1972,7 +1984,7 @@ export const employeesData = [
     Name: 'Miron Vitold',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar2,
@@ -1982,7 +1994,7 @@ export const employeesData = [
     Name: 'Nancy Davolio',
     Title: 'Sales Representative',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
     avatar2,
@@ -1993,7 +2005,7 @@ export const employeesData = [
     Name: 'Nasimiyu Danai',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar3,
@@ -2003,7 +2015,7 @@ export const employeesData = [
     Name: 'Iulia Albu',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar4,
@@ -2013,7 +2025,7 @@ export const employeesData = [
     Name: 'Siegbert Gottfried',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar2,
@@ -2023,7 +2035,7 @@ export const employeesData = [
     Name: 'Omar Darobe',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar,
@@ -2033,7 +2045,7 @@ export const employeesData = [
     Name: 'Penjani Inyene',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar,
@@ -2043,7 +2055,7 @@ export const employeesData = [
     Name: 'Miron Vitold',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar2,
@@ -2053,7 +2065,7 @@ export const employeesData = [
     Name: 'Nancy Davolio',
     Title: 'Sales Representative',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
     avatar2,
@@ -2064,7 +2076,7 @@ export const employeesData = [
     Name: 'Nasimiyu Danai',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar3,
@@ -2074,7 +2086,7 @@ export const employeesData = [
     Name: 'Iulia Albu',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar4,
@@ -2084,7 +2096,7 @@ export const employeesData = [
     Name: 'Siegbert Gottfried',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar2,
@@ -2094,7 +2106,7 @@ export const employeesData = [
     Name: 'Omar Darobe',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar,
@@ -2104,7 +2116,7 @@ export const employeesData = [
     Name: 'Penjani Inyene',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar,
@@ -2114,7 +2126,7 @@ export const employeesData = [
     Name: 'Miron Vitold',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'AUS',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar2,
@@ -3041,45 +3053,45 @@ export const scheduleData = [
 
 export const lineChartData = [
   [
-    { x: new Date(2005, 0, 1), y: 21 },
-    { x: new Date(2006, 0, 1), y: 24 },
-    { x: new Date(2007, 0, 1), y: 36 },
-    { x: new Date(2008, 0, 1), y: 38 },
-    { x: new Date(2009, 0, 1), y: 54 },
-    { x: new Date(2010, 0, 1), y: 57 },
-    { x: new Date(2011, 0, 1), y: 70 },
+    { x: new Date(2022, 0, 1), y: 115 },
+    { x: new Date(2022, 1, 1), y: 848 },
+    { x: new Date(2022, 2, 1), y: 219 },
+    { x: new Date(2022, 3, 1), y: 44 },
+    { x: new Date(2022, 4, 1), y: 313 },
+    { x: new Date(2022, 5, 1), y: 8 },
+    { x: new Date(2022, 6, 1), y: 76 },
   ],
   [
-    { x: new Date(2005, 0, 1), y: 28 },
-    { x: new Date(2006, 0, 1), y: 44 },
-    { x: new Date(2007, 0, 1), y: 48 },
-    { x: new Date(2008, 0, 1), y: 50 },
-    { x: new Date(2009, 0, 1), y: 66 },
-    { x: new Date(2010, 0, 1), y: 78 },
-    { x: new Date(2011, 0, 1), y: 84 },
+    { x: new Date(2022, 0, 1), y: 112 },
+    { x: new Date(2022, 1, 1), y: 398 },
+    { x: new Date(2022, 2, 1), y: 582 },
+    { x: new Date(2022, 3, 1), y: 344 },
+    { x: new Date(2022, 4, 1), y: 211 },
+    { x: new Date(2022, 5, 1), y: 23 },
+    { x: new Date(2022, 6, 1), y: 353 },
   ],
 
   [
-    { x: new Date(2005, 0, 1), y: 10 },
-    { x: new Date(2006, 0, 1), y: 20 },
-    { x: new Date(2007, 0, 1), y: 30 },
-    { x: new Date(2008, 0, 1), y: 39 },
-    { x: new Date(2009, 0, 1), y: 50 },
-    { x: new Date(2010, 0, 1), y: 70 },
-    { x: new Date(2011, 0, 1), y: 100 },
+    { x: new Date(2022, 0, 1), y: 72 },
+    { x: new Date(2022, 1, 1), y: 6 },
+    { x: new Date(2022, 2, 1), y: 57 },
+    { x: new Date(2022, 3, 1), y: 75 },
+    { x: new Date(2022, 4, 1), y: 33 },
+    { x: new Date(2022, 5, 1), y: 58 },
+    { x: new Date(2022, 6, 1), y: 45 },
   ],
 ];
 export const dropdownData = [
   {
     Id: '1',
-    Time: 'March 2021',
+    Time: 'May 2022',
   },
   {
     Id: '2',
-    Time: 'April 2021',
+    Time: 'June 2022',
   }, {
     Id: '3',
-    Time: 'May 2021',
+    Time: 'July 2022',
   },
 ];
 export const SparklineAreaData = [
@@ -3095,7 +3107,7 @@ export const lineCustomSeries = [
   { dataSource: lineChartData[0],
     xName: 'x',
     yName: 'y',
-    name: 'Germany',
+    name: 'Brisbane',
     width: '2',
     marker: { visible: true, width: 10, height: 10 },
     type: 'Line' },
@@ -3103,7 +3115,7 @@ export const lineCustomSeries = [
   { dataSource: lineChartData[1],
     xName: 'x',
     yName: 'y',
-    name: 'England',
+    name: 'Sydney',
     width: '2',
     marker: { visible: true, width: 10, height: 10 },
     type: 'Line' },
@@ -3111,7 +3123,7 @@ export const lineCustomSeries = [
   { dataSource: lineChartData[2],
     xName: 'x',
     yName: 'y',
-    name: 'India',
+    name: 'Melbourne',
     width: '2',
     marker: { visible: true, width: 10, height: 10 },
     type: 'Line' },
