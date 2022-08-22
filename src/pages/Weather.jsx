@@ -32,14 +32,14 @@ const Weather = () => {
   };
 
   return (
-    <div className="rounded-3xl bg-white m-2 p-2 mt-24 md:m-10 md:p-10 dark:bg-gray-300">
+    <div className="overflow-y-visible rounded-3xl min-h-590 bg-white m-2 p-2 mt-24 md:m-10 md:p-10 dark:bg-gray-300">
       <Header
         category="App"
         title="Weather"
       />
       <Search onSearchChange={ handleOnSearchChange } />
-      {currentWeather && <CurrentWeather data={ currentWeather } />}
-      {forecast && <Forecast data={ forecast } />}
+      { currentWeather && <CurrentWeather data={ currentWeather } /> }
+      { forecast && <Forecast data={ forecast } /> }
     </div>
   );
 };

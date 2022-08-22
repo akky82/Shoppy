@@ -7,6 +7,7 @@ import { IoMdContacts } from 'react-icons/io';
 import { RiContactsLine, RiStockLine } from 'react-icons/ri';
 import { MdOutlineSupervisorAccount } from 'react-icons/md';
 import { HiOutlineRefresh } from 'react-icons/hi';
+import { BsFillCloudSunFill } from 'react-icons/bs';
 import { TiTick } from 'react-icons/ti';
 import { GiLouvrePyramid } from 'react-icons/gi';
 import { GrLocation } from 'react-icons/gr';
@@ -526,7 +527,7 @@ export const links = [
       },
       {
         name: 'weather',
-        icon: <BiColorFill />,
+        icon: <BsFillCloudSunFill />,
       },
     ],
   },
