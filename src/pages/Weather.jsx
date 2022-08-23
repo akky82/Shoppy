@@ -17,7 +17,7 @@ const Weather = () => {
       `${WEATHER_API_URL}/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`
     );
     const forecastFetch = fetch(
-      `${WEATHER_API_URL}/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`
+      `${WEATHER_API_URL}/onecall?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric&exlude=current,minutely,hourly,alerts`
     );
 
     Promise.all([currentWeatherFetch, forecastFetch])
