@@ -33,7 +33,7 @@ const Forecast = ({ data }) => {
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
-              <div className="grid max-w-xl mx-auto px-3.5 py-1 gap-x-12 gap-y-0 grid-cols-2">
+              <div className="grid max-w-xl mx-auto px-3.5 py-1 gap-x-12 gap-y-0 grid-cols-2 text-sm md:text-base">
                 <div className="items-center px-5 flex justify-between h-7">
                   <label>Pressure:</label>
                   <label className="text-right">{item.pressure} hPa</label>
