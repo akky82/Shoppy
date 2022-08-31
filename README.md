@@ -1,3 +1,5 @@
+# This Web App has been made to showcase my understanding of React components booth self made and using the 3P library of Syncfusion. I am endeavouring to update this app to have a functional CRUD backend.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
